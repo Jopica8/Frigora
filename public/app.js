@@ -462,3 +462,15 @@ display.innerHTML = `
     </div>
 `;
 }
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(() => {
+                console.log("Frigora Service Worker aktiviert.");
+            })
+            .catch(error => {
+                console.error("Service Worker Fehler:", error);
+            });
+    });
+}
