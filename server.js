@@ -5,7 +5,7 @@ const path = require("path");
 const OpenAI = require("openai");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
