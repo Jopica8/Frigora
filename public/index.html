@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frigora – Dein KI-Rezeptgenerator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Frigora</h1>
+        <p>Aus deinen Zutaten wird dein nächstes Lieblingsessen.</p>
+    </header>
+
+    <main>
+
+        <section class="ingredient-section">
+
+            <h2>Was hast du im Kühlschrank?</h2>
+
+            <div class="ingredient-input">
+                <input
+                    type="text"
+                    id="ingredientInput"
+                    placeholder="z. B. Tomaten"
+                >
+
+                <button id="addIngredient">
+                    +
+                </button>
+            </div>
+
+            <div id="ingredientList"></div>
+
+            <div class="settings">
+
+    <div class="setting">
+        <label for="servings">Personen</label>
+
+        <select id="servings">
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5 Personen</option>
+            <option value="6">6 Personen</option>
+        </select>
+    </div>
+
+    <div class="setting">
+        <label for="maxTime">Maximale Zeit</label>
+
+        <select id="maxTime">
+            <option value="15">15 Minuten</option>
+            <option value="30" selected>30 Minuten</option>
+            <option value="45">45 Minuten</option>
+            <option value="60">60 Minuten</option>
+            <option value="90">90 Minuten</option>
+        </select>
+    </div>
+
+    <div class="setting">
+        <label for="diet">Ernährung</label>
+
+        <select id="diet">
+            <option value="alles">Alles</option>
+            <option value="vegetarisch">Vegetarisch</option>
+            <option value="vegan">Vegan</option>
+            <option value="low-carb">Low Carb</option>
+        </select>
+    </div>
+
+</div>
+
+            <button id="generateRecipe">
+                🤖 Rezept erstellen
+            </button>
+
+        </section>
+
+        <section id="recipeSection" class="recipe-section">
+
+            <h2>Dein Rezept</h2>
+
+            <div id="recipe">
+                <p>
+                    Gib zuerst deine Zutaten ein.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+        <section class="saved-shopping-section">
+    <h2>🛒 Deine Einkaufsliste <span id="shoppingCount">0 Artikel</span></h2>
+
+    <div id="savedShoppingItems">
+        <p>Noch keine gespeicherten Zutaten.</p>
+    </div>
+</section>
+
+<section class="favorites-section">
+    <h2>⭐ Deine Favoriten</h2>
+
+    <div id="favoritesList">
+        <p>Noch keine gespeicherten Rezepte.</p>
+    </div>
+
+    <div id="favoriteRecipeDisplay"></div>
+</section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
